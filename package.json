@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://malikabriq.github.io/portfolio/",
+  "homepage": "https://github.com/Gunjan-Hirani-AI",
   "type": "module",
   "scripts": {
     "dev": "vite",

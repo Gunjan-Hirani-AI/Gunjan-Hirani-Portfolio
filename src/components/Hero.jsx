@@ -23,17 +23,19 @@ export default function Hero() {
             Hi, I'm <span className="gradient-text">{profile.name}</span>
           </h1>
 
+          <p className="hero__title">{profile.title}</p>
+
           <h2 className="hero__role">
             <span className="hero__role-prefix">Building</span>{' '}
             <span className="hero__role-cycle">
-              <span>Intelligent AI Apps</span>
+              <span>AI Agents & RAG Systems</span>
             </span>
           </h2>
 
           <p className="hero__bio">{profile.bio}</p>
 
           <div className="hero__tags">
-            {['Python', 'FastAPI', 'LLMs', 'RAG Systems', 'Data Analysis'].map(tag => (
+            {['LangChain', 'RAG', 'Node.js', 'n8n', 'Multi-Agent AI'].map(tag => (
               <span key={tag} className="hero__tag">{tag}</span>
             ))}
           </div>
@@ -62,6 +64,9 @@ export default function Hero() {
             <a href={`mailto:${profile.email}`} className="hero__social" aria-label="Email">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </a>
+            <a href={profile.aiPortfolio} target="_blank" rel="noopener noreferrer" className="hero__social" aria-label="AI Portfolio">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </a>
           </div>
         </div>
 
@@ -75,7 +80,7 @@ export default function Hero() {
               className="hero__avatar"
             />
             <div className="hero__avatar-badge">
-              <span>🐍</span> Python Dev
+              <span>🤖</span> {profile.title}
             </div>
           </div>
 

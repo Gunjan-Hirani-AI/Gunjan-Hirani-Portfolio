@@ -11,8 +11,8 @@ export default function Experience() {
           <h2 className="section-title">
             My <span className="gradient-text">Professional Journey</span>
           </h2>
-          <p className="section-subtitle">
-            A timeline of my growth and contributions to the Python and AI ecosystem.
+          <p className="section-subtitle experience__subtitle">
+            Work experience in AI automation, multi-agent systems, and production Node.js backends.
           </p>
         </div>
 
