@@ -1,11 +1,18 @@
 import { useState, useEffect } from 'react';
+import { profile } from '../data';
 import './Navbar.css';
+
+const initials = profile.name
+  .split(' ')
+  .map((part) => part[0])
+  .join('');
 
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Education', href: '#education' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -42,8 +49,8 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar__inner container">
         <a className="navbar__logo" href="#home" onClick={() => handleNav('#home')}>
-          <span className="navbar__logo-icon">MA</span>
-          <span className="navbar__logo-text">Muhammad Abriq</span>
+          <span className="navbar__logo-icon">{initials}</span>
+          <span className="navbar__logo-text">{profile.name}</span>
         </a>
 
         <ul className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>
@@ -60,7 +67,7 @@ export default function Navbar() {
           ))}
           <li>
             <a
-              href="https://github.com/Malikabriq"
+              href={profile.github}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary navbar__cta"
